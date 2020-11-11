@@ -3,6 +3,10 @@ package com.charter.assignment;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
+
+/**
+ *  Reward calculator to calculate reward points earned for each customer per month and total
+ */
 public class RewardProgram {
     public static void main(String[] args) {
         Map<String, Map<Month, List<Integer>>> customerMap = new HashMap<>();
@@ -26,9 +30,9 @@ public class RewardProgram {
         customerATransactions.put(Month.MAR, customerAMarTransactions);
 
         Map<Month, List<Integer>> customerBTransactions = new HashMap<>();
-        customerBTransactions.put(Month.JAN, customerBJanTransactions);
-        customerBTransactions.put(Month.FEB, customerBFebTransactions);
-        customerBTransactions.put(Month.MAR, customerBMarTransactions);
+        customerBTransactions.put(Month.APR, customerBJanTransactions);
+        customerBTransactions.put(Month.MAY, customerBFebTransactions);
+        customerBTransactions.put(Month.JUN, customerBMarTransactions);
 
 
         customerMap.put(customerA, customerATransactions);
@@ -63,6 +67,11 @@ public class RewardProgram {
     }
 
 
+    /**
+     * Helper method to calculate reward points for each months transactions
+     * @param transactionMap
+     * @return rewardPerMonth
+     */
     public static List<Map<Month, Integer>> calculateRewards(Map<Month, List<Integer>> transactionMap) {
 
         List<Map<Month, Integer>> rewardPerMonth = new ArrayList<>();

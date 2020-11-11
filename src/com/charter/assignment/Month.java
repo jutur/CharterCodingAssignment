@@ -3,6 +3,9 @@ package com.charter.assignment;
 public enum Month {
     JAN,
     FEB,
-    MAR
+    MAR,
+    APR,
+    MAY,
+    JUN
 
 }
