@@ -11,14 +11,17 @@ public class RewardProgram {
     public static void main(String[] args) {
         Map<String, Map<Month, List<Integer>>> customerMap = new HashMap<>();
 
+        // Data Set for customer A and B
         String customerA = "Mark";
         String customerB = "Johnson";
 
+        // Customer A transactions
         List<Integer> customerAJanTransactions = new ArrayList<>(Arrays.asList(60, 80));
         List<Integer> customerAFebTransactions = new ArrayList<>(Arrays.asList(100, 80));
         List<Integer> customerAMarTransactions = new ArrayList<>(Arrays.asList(60, 120));
 
 
+        // Customer B transactions
         List<Integer> customerBJanTransactions = new ArrayList<>(Arrays.asList(70, 80));
         List<Integer> customerBFebTransactions = new ArrayList<>(Arrays.asList(120, 80));
         List<Integer> customerBMarTransactions = new ArrayList<>(Arrays.asList(80, 120));
